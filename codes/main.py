@@ -154,7 +154,7 @@ def test(opt):
     for load_path in opt['model']['generator']['load_path_lst']:
         # setup model index
         model_idx = osp.splitext(osp.split(load_path)[-1])[0]
-        
+
         # log
         logger.info('=' * 40)
         logger.info('Testing model: {}'.format(model_idx))

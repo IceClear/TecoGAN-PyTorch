@@ -11,8 +11,8 @@ import numpy as np
 
 
 def create_lmdb(dataset, raw_dir, lmdb_dir, filter_file=''):
-    assert dataset in ('VimeoTecoGAN', 'VimeoTecoGAN-sub'), \
-        'Unknown Dataset: {}'.format(dataset)
+    # assert dataset in ('VimeoTecoGAN', 'VimeoTecoGAN-sub'), \
+    #     'Unknown Dataset: {}'.format(dataset)
     print('Creating lmdb dataset: {}'.format(dataset))
 
     # retrieve sequences
@@ -87,8 +87,8 @@ def check_lmdb(dataset, lmdb_dir, display=True):
         else:
             cv2.imwrite('_'.join(win.split('/')) + '.png', img[..., ::-1])
 
-    assert dataset in ('VimeoTecoGAN', 'VimeoTecoGAN-sub'), \
-        'Unknown Dataset: {}'.format(dataset)
+    # assert dataset in ('VimeoTecoGAN', 'VimeoTecoGAN-sub'), \
+    #     'Unknown Dataset: {}'.format(dataset)
     print('Checking lmdb dataset: {}'.format(dataset))
 
     # load keys
@@ -135,10 +135,9 @@ if __name__ == '__main__':
     if osp.exists(lmdb_dir):
         print('Dataset [{}] already exists'.format(args.dataset))
         print('Checking the LMDB dataset ...')
-        check_lmdb(args.dataset, lmdb_dir)
+        # check_lmdb(args.dataset, lmdb_dir)
     else:
         create_lmdb(args.dataset, raw_dir, lmdb_dir, filter_file)
 
         print('Checking the LMDB dataset ...')
-        check_lmdb(args.dataset, lmdb_dir)
-
+        # check_lmdb(args.dataset, lmdb_dir)

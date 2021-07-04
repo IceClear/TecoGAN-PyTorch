@@ -21,13 +21,13 @@ fi
 
 
 exp_dir=./experiments_${degradation}/${model}/${exp_id}
-# check
-if [ -d "$exp_dir/train" ]; then
-  	echo "Train folder already exists: $exp_dir/train"
-    echo "Please delete the train folder, or setup a new experiment"
-    echo "Exiting ..."
-  	exit 1
-fi
+# # check
+# if [ -d "$exp_dir/train" ]; then
+#   	echo "Train folder already exists: $exp_dir/train"
+#     echo "Please delete the train folder, or setup a new experiment"
+#     echo "Exiting ..."
+#   	exit 1
+# fi
 
 
 # backup codes
